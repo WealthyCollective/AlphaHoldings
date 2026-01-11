@@ -70,6 +70,19 @@
         .stat-item { padding: 2rem; }
         .stat-number { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5rem); color: var(--gold); line-height: 1; margin-bottom: 1rem; }
         .stat-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+        .leadership-section { padding: 8rem 4rem; background: var(--white); }
+        .leadership-header { text-align: center; margin-bottom: 5rem; }
+        .leadership-header h2 { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+        .leadership-header p { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; color: var(--black); }
+        .leadership-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; max-width: 1400px; margin: 0 auto; }
+        .leader-card { text-align: center; }
+        .leader-image { width: 180px; height: 180px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--cream) 0%, #e8e4df 100%); border-radius: 50%; position: relative; overflow: hidden; }
+        .leader-image::after { content: ''; position: absolute; inset: 0; border: 1px solid var(--gold); border-radius: 50%; opacity: 0.3; }
+        .leader-name { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--black); margin-bottom: 0.3rem; }
+        .leader-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.9rem; color: var(--gold); margin-bottom: 1rem; }
+        .leader-bio { font-size: 0.85rem; line-height: 1.6; color: var(--muted); max-width: 280px; margin: 0 auto; }
+        @media (max-width: 1024px) { .leadership-grid { grid-template-columns: repeat(2, 1fr); gap: 3rem; } .leadership-section { padding: 6rem 2rem; } }
+        @media (max-width: 600px) { .leadership-grid { grid-template-columns: 1fr; } }
         .philosophy-section { padding: 10rem 4rem; background: var(--charcoal); text-align: center; }
         .philosophy-content { max-width: 900px; margin: 0 auto; }
         .philosophy-quote { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.4; margin-bottom: 3rem; }
@@ -148,6 +161,7 @@
         <div class="logo">Alpha Holdings</div>
         <ul class="nav-links">
             <li><a href="#brands">Brands</a></li>
+            <li><a href="#leadership">Leadership</a></li>
             <li><a href="#philosophy">Philosophy</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -308,6 +322,71 @@
         <div class="stat-item reveal"><div class="stat-number">∞</div><div class="stat-label">Possibilities</div></div>
     </section>
 
+    <section class="leadership-section" id="leadership">
+        <div class="leadership-header reveal">
+            <h2>Leadership</h2>
+            <p>Visionary minds building tomorrow's iconic brands</p>
+        </div>
+        <div class="leadership-grid">
+            <div class="leader-card reveal">
+                <div class="leader-image" style="background-image: url('https://i.ibb.co/bRCHFf6L/rummana.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Rummana Dada</h3>
+                    <p class="leader-title">Chief Commercial Advisor</p>
+                </div>
+            </div>
+            <div class="leader-card reveal">
+                <div class="leader-image"></div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Ayah-Sophia Dada</h3>
+                    <p class="leader-title">Founder & CEO</p>
+                </div>
+            </div>
+            <div class="leader-card reveal">
+                <div class="leader-image" style="background-image: url('https://i.ibb.co/ym8WvZHm/jesse.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Jesse Witkowski</h3>
+                    <p class="leader-title">CTO</p>
+                </div>
+            </div>
+            <div class="leader-card reveal">
+                <div class="leader-image"></div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Thea Faraji</h3>
+                    <p class="leader-title">Chief Idea Manager</p>
+                </div>
+            </div>
+            <div class="leader-card reveal">
+                <div class="leader-image" style="background-image: url('https://i.postimg.cc/rmvHYHFK/image.png'); background-size: cover; background-position: center;"></div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Omer Akbar</h3>
+                    <p class="leader-title">Design Team Lead</p>
+                </div>
+            </div>
+            <div class="leader-card reveal">
+                <div class="leader-image" style="background-image: url('https://i.postimg.cc/cL55qRtN/image.png'); background-size: cover; background-position: center;"></div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Elizabeth Tikoyan</h3>
+                    <p class="leader-title">Chief Community Officer</p>
+                </div>
+            </div>
+            <div class="leader-card reveal">
+                <div class="leader-image" style="background-image: url('https://i.postimg.cc/sfhzT28g/file.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Alexis Morgan</h3>
+                    <p class="leader-title">Head of Investor Relations</p>
+                </div>
+            </div>
+            <div class="leader-card reveal">
+                <div class="leader-image" style="background-image: url('https://i.postimg.cc/QMCG1N1h/1765228162075.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Atif Bhanjee</h3>
+                    <p class="leader-title">CFO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="philosophy-section" id="philosophy">
         <div class="philosophy-content reveal">
             <p class="philosophy-quote">"We don't just invest in brands. We cultivate <span>cultural movements</span> that shape how the next generation experiences the world."</p>
@@ -330,6 +409,7 @@
         <div class="footer-logo">Alpha Holdings</div>
         <div class="footer-links">
             <a href="#brands">Brands</a>
+            <a href="#leadership">Leadership</a>
             <a href="#philosophy">Philosophy</a>
             <a href="#contact">Contact</a>
         </div>
@@ -480,3 +560,4 @@
     </script>
 </body>
 </html>
+
