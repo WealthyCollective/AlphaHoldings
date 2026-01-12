@@ -336,7 +336,7 @@
                 </div>
             </div>
             <div class="leader-card reveal">
-                <div class="leader-image"></div>
+                <div class="leader-image" style="background-image: url('https://i.postimg.cc/J0DSwtyg/Whats-App-Image-2026-01-11-at-8-30-53-PM.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="leader-info">
                     <h3 class="leader-name">Ayah-Sophia Dada</h3>
                     <p class="leader-title">Founder & CEO</p>
@@ -422,6 +422,7 @@
             <div class="modal-header">
                 <h2 class="modal-brand-name" id="modalTitle"></h2>
                 <p class="modal-tagline" id="modalTagline"></p>
+                <p id="modalWebsite" style="margin-top: 0.75rem;"></p>
             </div>
             <div class="modal-body">
                 <p class="modal-snapshot" id="modalSnapshot"></p>
@@ -472,7 +473,7 @@
             crumb: { name: "Crumb", tagline: "Indulgence, perfected.", snapshot: "Rocky road cookies turned iconic—nostalgia upgraded into a craveable, collectible treat.", whatItIs: "A cookie brand built around texture and memory: marshmallow, chocolate, crunch—engineered for obsession.", whyWeBuiltIt: "Joy matters. Crumb is designed to be the treat people share, gift, and come back for.", signatureWorld: "Bite-size nostalgia.", bestFor: "Dessert lovers, gifting, pop-ups, celebrations.", cta: "Order" },
             still: { name: "STILL", tagline: "Find your freeze.", snapshot: "A modern recovery sanctuary—cold therapy, breath, and reset rituals in a space built for calm.", whatItIs: "A wellness studio centered on recovery culture with design-forward atmosphere and science-backed rituals.", whyWeBuiltIt: "The next generation takes recovery seriously. STILL makes resilience a lifestyle—beautiful, accessible, repeatable.", signatureWorld: "Calm strength.", bestFor: "Athletes, high-performers, wellness communities.", cta: "Book a session" },
             revise: { name: "Revise", tagline: "Rewritten in gold.", snapshot: "Jewelry as reinvention—timeless pieces with modern edge, made to mark chapters and milestones.", whatItIs: "Fine + fashion jewelry blending delicacy with statement—everyday staples and power pieces.", whyWeBuiltIt: "Style is identity over time. Revise celebrates evolution—becoming, upgrading, rewriting your story.", signatureWorld: "Milestones, worn.", bestFor: "Gifting, self-expression, milestone moments.", cta: "Shop jewelry" },
-            alphavogue: { name: "Alpha Vogue", tagline: "A Gen Alpha & Teen magazine for the future.", snapshot: "A culture-and-education magazine built for Gen Alpha and teens—where trends meet curiosity, and confidence meets learning.", whatItIs: "A next-gen magazine platform featuring youth-led stories across style, school, sport, wellness, and what's next—made to be smart, fun, and genuinely empowering.", whyWeBuiltIt: "Young people deserve media that takes them seriously. Alpha Vogue exists to elevate voices, spark ambition, and make learning feel like culture.", signatureWorld: "Youth-led. Future-focused.", bestFor: "Gen Alpha, teens, parents, educators, and brands building with youth.", cta: "Read the latest" }
+            alphavogue: { name: "Alpha Vogue", tagline: "A Gen Alpha & Teen magazine for the future.", website: "www.alphavogue.co", snapshot: "A culture-and-education magazine built for Gen Alpha and teens—where trends meet curiosity, and confidence meets learning.", whatItIs: "A next-gen magazine platform featuring youth-led stories across style, school, sport, wellness, and what's next—made to be smart, fun, and genuinely empowering.", whyWeBuiltIt: "Young people deserve media that takes them seriously. Alpha Vogue exists to elevate voices, spark ambition, and make learning feel like culture.", signatureWorld: "Youth-led. Future-focused.", bestFor: "Gen Alpha, teens, parents, educators, and brands building with youth.", cta: "Read the latest" }
         };
 
         const cursor = document.querySelector('.cursor');
@@ -506,6 +507,15 @@
             if (!data) return;
             document.getElementById('modalTitle').textContent = data.name;
             document.getElementById('modalTagline').textContent = data.tagline;
+            
+            const websiteEl = document.getElementById('modalWebsite');
+            if (data.website) {
+                websiteEl.innerHTML = '<a href="https://' + data.website + '" target="_blank" style="font-size: 0.85rem; color: #c9a962; text-decoration: none; letter-spacing: 0.05em;">' + data.website + '</a>';
+                websiteEl.style.display = 'block';
+            } else {
+                websiteEl.style.display = 'none';
+            }
+            
             document.getElementById('modalSnapshot').textContent = data.snapshot;
             document.getElementById('modalWhatItIs').textContent = data.whatItIs;
             document.getElementById('modalWhyWeBuiltIt').textContent = data.whyWeBuiltIt;
@@ -560,4 +570,3 @@
     </script>
 </body>
 </html>
-
